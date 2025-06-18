@@ -2,7 +2,7 @@
 
 /**
  * main - 4-puts.c
- * Descirption: Write a C program that prints exactly Programming is like building a multilingual puzzle, followed by a new line
+ * Descirption: Write a C program that prints exactly the quote in question 4
  * Return: Needs to return 0 value
  */
 
