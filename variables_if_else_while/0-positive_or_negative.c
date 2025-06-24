@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* 
+/*
  *main- 0-positive_or_negative
  *Description - If statement n
 *Return: Always 0 (sucess)
