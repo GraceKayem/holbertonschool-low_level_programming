@@ -2,14 +2,14 @@
 /**
  * main - Entry point of the program
  *
- * Description:  *
+ * Description: print tebahpla
+ *
  * Return: Always 0 (Success)
  */
-
-int main(void) {
+int main(void)
+{
 int alph_rev;
-
-for (alph_rev = 'a'; alph_rev <= 'z'; alph_rev++)
+for (alph_rev = 'z'; alph_rev >= 'a'; alph_rev--)
 {
 putchar(alph_rev);
 }
