@@ -10,9 +10,14 @@
 void puts2(char *str)
 {
 int firstChar = 0;
-for (firstChar = 0; str[firstChar] != '\0'; firstChar += 2)
+while (str[firstChar] != '\0')
 {
 _putchar(str[firstChar]);
+firstChar++;
+if (str[firstChar] != '\0')
+{
+firstChar++;
+}
 }
 _putchar ('\n');
 }
