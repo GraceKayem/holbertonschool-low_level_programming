@@ -13,7 +13,7 @@ int firstChar = 0;
 while (str[firstChar] != '\0')
 {
 _putchar(str[firstChar]);
-firstChar  += 2;
+firstChar += 2;
 }
 _putchar ('\n');
 }
