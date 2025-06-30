@@ -33,6 +33,6 @@ else if (evaldone == 1)
 break;
 }
 }
-evalnum = sign * finalnum;
+evalnum = sign *finalnum;
 return (evalnum);
 }
