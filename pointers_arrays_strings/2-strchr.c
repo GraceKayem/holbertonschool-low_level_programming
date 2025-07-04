@@ -15,12 +15,8 @@ while (*s)
 {
 if (*s == c)
 {
-s++;
-}
-else
-{
 return (s);
-}
+s++;
 }
 if (c == '\0')
 {
