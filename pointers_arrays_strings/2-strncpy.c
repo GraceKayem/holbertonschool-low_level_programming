@@ -28,5 +28,5 @@ while (copy < n)
 dest++;
 copy++;
 }
-return startaddress;
+return (startaddress);
 }
