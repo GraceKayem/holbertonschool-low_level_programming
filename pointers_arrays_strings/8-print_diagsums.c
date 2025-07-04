@@ -19,5 +19,5 @@ for (i = 0; i < size; i++)
 square1 += a[i * size + i];
 square2 += a[i * size + (size - 1 - i)];
 }
-printf("%d, %dn", square1, square2);
+printf("%d, %d\n", square1, square2);
 }
