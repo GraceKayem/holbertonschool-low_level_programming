@@ -12,8 +12,8 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-int length;
-int concate;
+int length = 0;
+int concate = 0;
 /*the end of dest string*/
 while (dest[length] != '\0')
 {
