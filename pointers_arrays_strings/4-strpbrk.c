@@ -14,7 +14,7 @@ char *_strpbrk(char *s, char *accept)
 int i;
 int j;
 /*looping each character in s string */
-for (i = 0; accept[j] != '\0'; i++)
+for (i = 0; s[i] != '\0'; i++)
 {
 /* checking is s[i] matches characters in accept */
 for (j = 0; accept[j] != '\0'; j++)
