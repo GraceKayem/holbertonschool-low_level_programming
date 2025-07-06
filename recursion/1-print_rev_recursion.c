@@ -17,5 +17,5 @@ return;
 /*recursive call with the next character o from olleh*/
 _print_rev_recursion(s + 1);
 /*print character after recursive call (reverses order*/
-putchar(*s);
+_putchar(*s);
 }
