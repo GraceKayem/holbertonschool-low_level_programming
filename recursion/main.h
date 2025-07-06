@@ -11,5 +11,6 @@ int is_prime_number(int n);
 
 int square_root(int n, int check);
 int prime(int n, int i);
+int _putchar(char c);
 
 #endif
