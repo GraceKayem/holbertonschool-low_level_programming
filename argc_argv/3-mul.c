@@ -25,7 +25,7 @@ return (1);
 num1 = atoi(argv[1]);
 num2 = atoi(argv[2]);
 /*multiplying num1 and num2*/
-sum = num1 * num2;
+sum = num1 *num2;
 
 /*printing the sum of num1 * num2*/
 printf("%d\n", sum);
