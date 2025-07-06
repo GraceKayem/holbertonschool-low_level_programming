@@ -20,5 +20,5 @@ return (1);
 }
 /*recursive case*/
 /*multiplying current n by factorial of n - 1*/
-return (n * factorial(n -1));
+return (n * factorial(n - 1));
 }

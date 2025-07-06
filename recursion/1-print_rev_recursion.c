@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _print_rev_recursion - Entry point of the program
@@ -16,5 +17,5 @@ return;
 /*recursive call with the next character o from olleh*/
 _print_rev_recursion(s + 1);
 /*print character after recursive call (reverses order*/
-_putchar(*s);
+putchar(*s);
 }
