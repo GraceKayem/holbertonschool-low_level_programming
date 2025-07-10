@@ -13,10 +13,10 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 char *concat;
-int length1 = 0;
-int length2 = 0;
-int i;
-int j;
+unsigned int length1 = 0;
+unsigned int length2 = 0;
+unsigned int i;
+unsigned int j;
 /*if NULL is passed, treat it as an empty string*/
 if (s1 == NULL)
 {
@@ -28,10 +28,18 @@ s2 = "";
 }
 /*Calculate length of s1*/
 while (s1[length1] != '\0')
+{
 length1++;
+}
 /* Calculate length of s2 */
 while (s2[length2] != '\0')
+{
 length2++;
+}
+if (n > length2)
+{
+n = length2;
+}
 /*allocating memory for concatenated string + null terminator*/
 concat = malloc(sizeof(char) * (length1 + n + 1));
 if (concat == NULL)
