@@ -51,7 +51,7 @@ for (i = 0; i < length1; i++)
 {
 concat[i] = s1[i];
 }
-for (j = 0; j < length2; j++)
+for (j = 0; j < n; j++)
 {
 concat[i + j] = s2[j];
 }
