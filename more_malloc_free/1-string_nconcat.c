@@ -33,7 +33,7 @@ length1++;
 while (s2[length2] != '\0')
 length2++;
 /*allocating memory for concatenated string + null terminator*/
-concat = malloc(sizeof(char) * (length1 + length2 + 1));
+concat = malloc(sizeof(char) * (length1 + n + 1));
 if (concat == NULL)
 {
 return (NULL);
@@ -50,4 +50,3 @@ concat[i + j] = s2[j];
 concat[i + j] = '\0';
 return (concat);
 }
-
