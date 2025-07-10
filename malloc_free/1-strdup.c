@@ -11,7 +11,7 @@
  */
 char *_strdup(char *str)
 {
-int length;
+int length = 0;
 int i;
 char *copy;
 
@@ -22,7 +22,7 @@ return (NULL);
 }
 
 /*counting length of string*/
-while (str[length] != '\0';
+while (str[length] != '\0');
 length++;
 
 /*allocating memory using malloc*/

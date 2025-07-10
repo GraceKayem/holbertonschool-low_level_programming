@@ -12,7 +12,6 @@
 int main(void)
 {
 char *s;
-
 s = _strdup("Duplicated");
 if (s == NULL)
 {
