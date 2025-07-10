@@ -17,38 +17,33 @@ unsigned int length1 = 0;
 unsigned int length2 = 0;
 unsigned int i;
 unsigned int j;
-/*if NULL is passed, treat it as an empty string*/
 if (s1 == NULL)
-{
+{/*if NULL is passed, treat it as an empty string*/
 s1 = "";
 }
 if (s2 == NULL)
 {
 s2 = "";
 }
-/*Calculate length of s1*/
 while (s1[length1] != '\0')
-{
+{/*Calculate length of s1*/
 length1++;
 }
-/* Calculate length of s2 */
 while (s2[length2] != '\0')
-{
+{/* Calculate length of s2 */
 length2++;
 }
 if (n > length2)
 {
 n = length2;
 }
-/*allocating memory for concatenated string + null terminator*/
 concat = malloc(sizeof(char) * (length1 + n + 1));
 if (concat == NULL)
-{
+{/*allocating memory for concatenated string + null terminator*/
 return (NULL);
 }
-/*copying s1 and s2 to concat*/
 for (i = 0; i < length1; i++)
-{
+{/*copying s1 and s2 to concat*/
 concat[i] = s1[i];
 }
 for (j = 0; j < n; j++)
