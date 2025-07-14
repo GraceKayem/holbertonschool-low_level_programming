@@ -16,19 +16,13 @@ dog_t *newDog;
 char *cpName, *cpOwner;
 int nameLength = 0, ownerLength = 0, i;
 /*calculating the length*/
-while (name && name[nameLength] != '\0')
-{
-nameLength++;
-}
-while (owner && owner[ownerLength] != '\0')
-{
-ownerLength++;
-}
+for (nameLength = 0; name && name[nameLength] != '\0'; nameLength++)
+;
+for (ownerLength = 0; owner && owner[ownerLength] != '\0'; ownerLength++)
+;
 newDog = malloc(sizeof(dog_t));
 if (newDog == NULL)
-{
 return (NULL);
-}
 cpName = malloc(sizeof(char) * (nameLength + 1));
 if (cpName == NULL)
 {
