@@ -27,7 +27,7 @@ string = va_arg(arg, char *);/*getting the next string*/
 
 if (string == NULL)
 {
-printf("nill"); /*If the string is NULL will print "nil"*/
+printf("(nil)"); /*If the string is NULL will print "nil"*/
 }
 else
 {
