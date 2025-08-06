@@ -3,6 +3,20 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#define BUFFER_SIZE 1024
+
+/**
+ * error_exit - program that copies the content of a file to another file
+ * @exit_code: program that copies the content of a file to another file
+ * @message: program that copies the content of a file to another file
+ * @arg: program that copies the content of a file to another file
+ */
+void error_exit(int exit_code, const char *message, const char *arg)
+{
+        dprintf(STDERR_FILENO, message, arg);
+        exit(exit_code);
+}
+
 /**
  * main - Entry point.
  *
@@ -54,18 +68,3 @@ int main(int ac, char **av)
 
 	return (0);
 }
-
-#define BUFFER_SIZE 1024
-
-/**
- * error_exit - program that copies the content of a file to another file
- * @exit_code: program that copies the content of a file to another file
- * @message: program that copies the content of a file to another file
- * @arg: program that copies the content of a file to another file
- */
-void error_exit(int exit_code, const char *message, const char *arg)
-{
-	dprintf(STDERR_FILENO, message, arg);
-	exit(exit_code);
-}
-
