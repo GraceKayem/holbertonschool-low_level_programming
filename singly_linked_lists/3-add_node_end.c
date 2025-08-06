@@ -13,8 +13,8 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *newNode;
-	list_t *lastNode;
+	list_t *newNode, *lastNode;
+	unsigned int count = 0;
 
 	if (str == NULL)
 	{
@@ -33,7 +33,11 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	newNode->len = strlen(str);
+	while (str[count] != '\0')
+	{
+		count++;
+	}
+	newNode->len = count;
 	newNode->next = NULL;
 	if (*head == NULL)
 	{
@@ -42,13 +46,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	else
 	{
 	lastNode = *head;
-	/*last node's next address will be NULL*/
 	while (lastNode->next != NULL)
 	{
 		lastNode = lastNode->next;
 	}
-
-	/*add the newNode at the end of the linked list*/
 	lastNode->next = newNode;
 	}
 	return (newNode);
