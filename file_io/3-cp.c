@@ -32,7 +32,7 @@ int main(int ac, char **av)
 	char buffer[BUFFER_SIZE];
 
 	if (ac != 3)
-	error_exit(97, "Usage: %s file_from file_to\n", av[0]);
+	error_exit(97, "Usage: cp file_from file_to\n", "");
 
 	fd_from = open(av[1], O_RDONLY);
 	if (fd_from == -1)
