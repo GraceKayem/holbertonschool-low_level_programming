@@ -46,7 +46,7 @@ int main(int ac, char **av)
 	}
 	while ((r = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
-	w = write(fd_to, buffer, r);
+		w = write(fd_to, buffer, r);
 		if (w == -1 || w != r)
 		{
 			close(fd_from);
