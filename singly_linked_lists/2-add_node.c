@@ -15,6 +15,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *newNode;
+	unsigned int count = 0;
 
 	if (str == NULL)
 	{
@@ -33,7 +34,11 @@ list_t *add_node(list_t **head, const char *str)
 		free(newNode);
 		return (NULL);
 	}
-	newNode->len = strlen(str);
+	while (str[count] != '\0')
+	{
+		count++;
+	}
+	newNode->len = count;
 	/*making the newNode point to the head node*/
 	newNode->next = *head;
 	/*making the new node as the first node*/
