@@ -55,25 +55,23 @@ int main(int ac, char **av)
 		close_fd(fd_from);
 		error_exit(99, "Error: Can't write to %s\n", av[2]);
 	}
-	while (1)
+	while ((r = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
-		r = read(fd_from, buffer, BUFFER_SIZE);
-		if (r == -1)
-		{
-			close_fd(fd_from);
-			close_fd(fd_to);
-			error_exit(98, "Error: Can't read from file %s\n", av[1]);
-		}
-		if (r == 0)
-			break;
 		w = write(fd_to, buffer, r);
 		if (w == -1 || w != r)
 		{
-			close_fd(fd_from);
-			close_fd(fd_to);
+			close(fd_from);
+			close(fd_to);
 			error_exit(99, "Error: Can't write to %s\n", av[2]);
 		}
 	}
+	if (r == -1)
+	{
+		close(fd_from);
+		close(fd_to);
+		error_exit(98, "Error: Can't read from file %s\n", av[1]);
+	}
+
 	close_fd(fd_from);
 	close_fd(fd_to);
 	return (0);
