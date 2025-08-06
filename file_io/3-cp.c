@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+
 #define BUFFER_SIZE 1024
 
 /**
@@ -13,8 +14,8 @@
  */
 void error_exit(int exit_code, const char *message, const char *arg)
 {
-        dprintf(STDERR_FILENO, message, arg);
-        exit(exit_code);
+	dprintf(STDERR_FILENO, message, arg);
+	exit(exit_code);
 }
 
 /**
@@ -32,12 +33,13 @@ int main(int ac, char **av)
 	char buffer[BUFFER_SIZE];
 
 	if (ac != 3)
-	error_exit(97, "Usage: cp file_from file_to\n", "");
-
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
 	fd_from = open(av[1], O_RDONLY);
 	if (fd_from == -1)
-	error_exit(98, "Error: Can't read from file %s\n", av[1]);
-
+		error_exit(98, "Error: Can't read from file %s\n", av[1]);
 	fd_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
@@ -61,10 +63,9 @@ int main(int ac, char **av)
 		error_exit(98, "Error: Can't read from file %s\n", av[1]);
 	}
 	if (close(fd_from) == -1)
-	error_exit(100, "Error: Can't close fd %d\n", av[1]);
-
+		error_exit(100, "Error: Can't close fd %d\n", fd_from);
 	if (close(fd_to) == -1)
-	error_exit(100, "Error: Can't close fd %d\n", av[2]);
+		error_exit(100, "Error: Can't close fd %d\n", fd_to);
 
 	return (0);
 }
