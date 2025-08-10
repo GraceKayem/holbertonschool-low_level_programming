@@ -26,7 +26,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	/*allocating the memory of pointer to pointer*/
 	ht->array = malloc(sizeof(hash_node_t *) * size);
-	
 	/*if malloc fails*/
 	if (ht->array == NULL)
 	{
